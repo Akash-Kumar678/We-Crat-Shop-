@@ -1,0 +1,230 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:  Arial, Helvetica, sans-serif;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+body{
+    min-height: 100vh;
+    background-color: blanchedalmond;
+    background-size: cover;
+    background-position: center;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgb(20, 90, 31);
+    box-shadow: 0 5px 10px rgba(0,0,0,.1);
+    padding: 20px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+header .logo{
+    font-weight: bolder;
+    font-size: 25px;
+    color: bisque;
+}
+.searchbox{
+    display: none;
+    font-size: 12px;
+    justify-content: center;
+    align-items: center;
+}
+.searchbox a{
+    text-decoration:none ;
+    color: bisque;
+}
+header .navbar ul{
+    list-style: none;
+
+}
+header .navbar ul li{
+    position: relative;
+    float: left;
+}
+header .navbar ul li a{
+    font-size: 15px;
+    padding: 20px;
+    color:blanchedalmond;
+    display: block;
+}
+header .navbar ul li a:hover{
+    background: #333;
+    color:bisque
+}
+header .navbar ul li ul{
+    position: absolute;
+    left: 0;
+    width: 200px;
+    display: none;
+    background: #000;
+}
+header .navbar ul li ul li{
+    width: 100%;
+    border-top: 1px solid rgba(0,0,0,.1);
+}
+header .navbar ul li ul li ul{
+left: 200px;
+top: 0;
+
+}
+header .navbar ul li:focus-within > ul,
+header .navbar ul li:hover > ul{
+display: initial;
+
+}
+
+#menu-bar{
+    display: none;
+}
+header label{
+    font-size: 15px;
+    color:bisque;
+    cursor: pointer;
+    display: none;
+}
+
+.middle{
+    position: relative;
+    
+    top: 17vh;
+    display: flex;
+
+
+}
+.midleft{
+    width: 30%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 2px;
+}
+.midmid{
+    width:40%
+}
+.midright{
+    width: 30%;
+    align-items: right;
+    text-align: right;
+    padding-right: 5%;
+}
+.sbox{
+    border: 1px solid rgb(14, 87, 14);
+    border-radius: 50px;
+    
+
+}
+.sbox:hover{
+    border: 3px solid rgb(37, 147, 167);
+}
+/*
+#footer{
+    position: fixed;
+    margin-top: 12px;
+    bottom: 0;
+    width: 100%;
+    height: fit-content;
+    background: #000;
+} */
+.cards{
+    position: absolute;
+    margin-top: 18vh;
+
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(225px,1fr));
+    gap: 20px;
+    font-family: sans-serif;
+}
+.card{
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+
+}
+
+.card_image{
+    width: 100%;
+    display: block;
+} 
+.cardcontent{
+    line-height: 1.5;
+    font-size: 0.9em;
+    padding: 15px;
+    background: rgb(218, 216, 216);
+    color:rgb(20, 90, 31)
+
+}
+.cardcontent  h4{
+    margin-top: 0px;
+}
+.cardbtn{
+    padding: 15px;
+    background: #aaa;
+    font-size: 0.9em;
+    border-bottom: 2px solid #666;
+    text-align: center;
+}
+.cardlink{
+    font-size: 18px;
+    color: black;
+    text-decoration: none;
+
+}
+.cardbtn:hover{
+    text-decoration: solid;
+    cursor: pointer;
+    color: aqua;
+    background: #ccc;
+}
+
+@media(max-width:620px){
+
+ header{
+    padding: 20px;
+ } 
+ .searchbox{
+     display: initial;
+ }
+ header label{
+    display: initial;
+ }
+ header .navbar{
+     position: absolute;
+     top: 100%; 
+     left: 0;
+     right: 0;
+     background: #000;
+     border-top: 1px solid rgba(0,0,0,.1);
+     display: none;
+}
+ header .navbar ul li{
+     width: 100%;
+}
+header .navbar ul li ul{
+    position: relative;
+    width: 100%;
+}
+header .navbar ul li ul li{
+    background: #000;
+
+}
+header .navbar ul li ul li ul{
+    width: 100%;
+    left: 0;
+
+}
+
+#menu-bar:checked ~ .navbar{
+    display: initial;
+}
+.middle{
+    display: none;
+}
+
+}
